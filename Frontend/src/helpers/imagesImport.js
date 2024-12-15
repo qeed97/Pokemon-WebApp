@@ -5,7 +5,7 @@ import fuego_ironworks from '../assets/fuego-ironworks.webp';
 import great_marsh from '../assets/great-marsh.webp';
 import mt_coronet from '../assets/mt-coronet.webp';
 import oreburgh_gate from '../assets/oreburgh-gate.webp';
-import oreburgh_mine from '../assets/oreburgh-gate.webp';
+import oreburgh_mine from '../assets/oreburgh-mine.webp';
 import pastoria_city from '../assets/pastoria-city.webp';
 import ravaged_path from '../assets/ravaged-path.webp';
 import sinnoh_pokemon_league from '../assets/sinnoh-pokemon-league.webp';
