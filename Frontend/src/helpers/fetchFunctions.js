@@ -1,4 +1,4 @@
-﻿const fetchArea = async () => {
+﻿const fetchArea = async (lockey, encId) => {
     try {
         const res = await fetch(`${lockey}/${encId}`);
         return await res.json();

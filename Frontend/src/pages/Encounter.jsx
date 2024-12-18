@@ -27,7 +27,7 @@ export default function Encounter(props) {
 
     useEffect( () => {
         const fetchData = async () => {
-            const area = await fetchFunctions.fetchArea();
+            const area = await fetchFunctions.fetchArea(lockey, encId);
             if (area.areas.length > 0 && Array.isArray(area.areas)) {
                 const encounters = await fetchFunctions.fetchEncounters(area.areas);
                 const pokemonUrl = fetchFunctions.chooseRandomPokemon(encounters);
