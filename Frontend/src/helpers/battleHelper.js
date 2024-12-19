@@ -23,8 +23,8 @@ function gameLoop(enemy, ally) {
         currentEnemyHp = enemy.stats[0].base_stat;
     }
 
-    if (currentAllyHp === ally.stats[0].base_stat || currentAllyHp === Infinity){
-        currentAllyHp = ally.stats[0].base_stat
+    if (currentAllyHp === ally.stats[0].base_stat || currentAllyHp === Infinity) {
+        currentAllyHp = ally.stats[0].base_stat;
     }
 
     if (isPlayerTurn && !gameData.gameOver){

@@ -11,6 +11,20 @@ export default {
         },
         imageRendering: {
             pixelated: 'pixelated',
+        },
+        keyframes: {
+            slidefromleft: {
+                from: {marginRight: '120%'},
+                to: {marginRight: '0%'},
+            },
+            slidefromright: {
+                from: {marginLeft: '120%'},
+                to: {marginLeft: '0%'},
+            },
+        },
+        animation: {
+            'slide-in-left': 'slidefromleft 1s ease-out',
+            'slide-in-right': 'slidefromright 1s ease-out',
         }
     },
   },
