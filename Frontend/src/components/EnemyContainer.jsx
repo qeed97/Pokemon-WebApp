@@ -7,7 +7,7 @@ export default function EnemyContainer({enemyPokemon}) {
         <div className="enemy-container">
             <div className="enemy-data">
                 <p>{enemyPokemon.name}</p>
-                <Healthbar currentHealt={battlehelper.gameData.enemy.hp} healt={enemyPokemon.stats[0].base_stat}/>
+                <Healthbar currentHealt={battleHelper.gameData.enemy.hp} healt={enemyPokemon.stats[0].base_stat}/>
             </div>
             <div className='enemy-picture'>
                 <div className='img-container'>

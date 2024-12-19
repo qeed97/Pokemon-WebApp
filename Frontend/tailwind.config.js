@@ -8,9 +8,20 @@ export default {
     extend: {
         fontFamily: {
             "silkscreen": ['SilkScreen', 'sans-serif'],
+        },
+        imageRendering: {
+            pixelated: 'pixelated',
         }
     },
   },
-  plugins: [],
+  plugins: [
+      function ({addUtilities}) {
+      addUtilities({
+          '.image-pixelated': {
+              'image-rendering': 'pixelated',
+          },
+      });
+      },
+  ],
 }
 
