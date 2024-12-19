@@ -7,9 +7,9 @@
 }
 
 body {
-    @apply w-full h-full bg-[#031e19];
+    @apply w-full h-full bg-[#031e19] font-silkscreen;
 }
 
 #root {
-    @apply w-full h-full;
+    @apply w-full h-full text-[#fcfaf8];
 }

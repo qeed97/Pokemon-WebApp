@@ -1,7 +1,9 @@
 ﻿import React from 'react';
 import battlehelper from '../helpers/battlehelper.js';
+import {useNavigate} from "react-router-dom";
 
 export default function InfoContainer({enemyPokemon, allyPokemon, setGameData}) {
+    const navigate = useNavigate();
     function handleAttack(enemy, ally) {
         battlehelper.gameLoop(enemy,ally);
         setGameData({...battlehelper.gameData});
@@ -27,7 +29,7 @@ export default function InfoContainer({enemyPokemon, allyPokemon, setGameData}) 
                     <button onClick={() => {
                         battlehelper.resetBattle();
                         setGameData({...battlehelper.gameData});
-                        // NAVIGATE setPage('home')
+                        navigate('/');
                     }}>Go home
                     </button>
                 </div>
