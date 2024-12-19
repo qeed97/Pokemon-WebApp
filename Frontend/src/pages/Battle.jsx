@@ -11,7 +11,7 @@ export default function Battle(props) {
 
     return (
         <div>
-            <div className="battle">
+            <div className="battle flex flex-col justify-center w-[80%] h-[100vh] m-auto">
                 <EnemyContainer enemyPokemon={enemyPokemon} setGameData={setGameData}/>
                 <InfoContainer enemyPokemon={enemyPokemon} allyPokemon={allyPokemon} setGameData={setGameData}/>
                 <AllyContainer allyPokemon={allyPokemon} gameData={gameData}/>
