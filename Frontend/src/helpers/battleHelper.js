@@ -17,7 +17,7 @@ let aiTurnDelay;
 let caughtPokemon = '';
 let currentPokemons = '';
 
-function gameLoop(enemy, ally) {
+function gameLoop(enemy, ally , setEnemyAnimation, setAllyAnimation) {
     currentPokemons = localStorage.getItem('currentPokemons');
     if (currentEnemyHp === enemy.stats[0].base_stat || currentEnemyHp === Infinity) {
         currentEnemyHp = enemy.stats[0].base_stat;
@@ -29,16 +29,19 @@ function gameLoop(enemy, ally) {
 
     if (isPlayerTurn && !gameData.gameOver){
         gameData.gameStart = false;
-        playerTurn(enemy, ally);
+        playerTurn(enemy, ally, setEnemyAnimation, setAllyAnimation);
     }
 
     if (!isPlayerTurn && !gameData.gameOver){
         clearTimeout(aiTurnDelay);
-        aiTurnDelay = setTimeout(() => aiTurn(enemy, ally), 1000);
+        aiTurnDelay = setTimeout(() => aiTurn(enemy, ally, setEnemyAnimation, setAllyAnimation), 1000);
     }
 }
 
-function playerTurn(enemy, ally){
+function playerTurn(enemy, ally, setEnemyAnimation, setAllyAnimation){
+    setAllyAnimation('animate-mirroredAttack');
+    setEnemyAnimation('animate-defend');
+
     let Z = randomGenerator(217, 255);
     let damage = Math.floor(((((2/5+2)*ally.stats[1].base_stat*60/enemy.stats[2].base_stat)/50)+2)*Z/255);
     currentEnemyHp = currentEnemyHp - damage < 0 ? 0 : currentEnemyHp - damage;
@@ -50,7 +53,10 @@ function playerTurn(enemy, ally){
     isPlayerTurn = false;
 }
 
-function aiTurn(enemy, ally){
+function aiTurn(enemy, ally, setEnemyAnimation, setAllyAnimation){
+    setEnemyAnimation('animate-attack');
+    setAllyAnimation('animate-defend');
+
     let Z = randomGenerator(217, 255);
     let damage = Math.floor(((((2/5+2)*enemy.stats[1].base_stat*60/ally.stats[2].base_stat)/50)+2)*Z/255);
     currentAllyHp = currentAllyHp - damage < 0 ? 0 : currentAllyHp - damage;
