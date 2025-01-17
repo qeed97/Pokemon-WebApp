@@ -1,6 +1,5 @@
 ﻿import React from 'react';
 import Healthbar from './Healthbar.jsx';
-import battleHelper from '../helpers/battleHelper.js';
 
 export default function AllyContainer({ allyPokemon, gameData, animation}) {
     return (

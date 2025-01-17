@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import Encounter from './Encounter';
 import fetchFunctions from "../helpers/fetchFunctions"
 import { BrowserRouter } from "react-router-dom";
-import { describe, it, vi, expect, beforeEach, beforeAll } from "vitest";
+import { describe, it, vi, expect, beforeEach } from "vitest";
 
 vi.mock("../helpers/fetchFunctions", () => {
     const actual = vi.importActual("../helpers/fetchFunctions");
