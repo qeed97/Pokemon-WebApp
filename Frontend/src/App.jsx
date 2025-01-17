@@ -1,5 +1,5 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom"
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import Locations from "./pages/Locations.jsx";
 import Encounter from "./pages/Encounter.jsx";
 import Battle from "./pages/Battle.jsx";
