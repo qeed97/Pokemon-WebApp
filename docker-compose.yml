@@ -1,0 +1,13 @@
+﻿networks:
+  my-network:
+
+services:
+  pokemon-app:
+    container_name: pokemon-webapp
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - my-network
